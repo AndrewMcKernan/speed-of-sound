@@ -1,4 +1,3 @@
-// speed_of_sound_theory.h
 #include <cmath>
 
 #ifndef SPEED_OF_SOUND_THEORY_H_

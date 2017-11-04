@@ -1,5 +1,4 @@
-// speed_of_sound_theory.cc
-#include "speed_of_sound_theory.h"
+#include "speed-of-sound-theory.h"
 
 namespace speedofsound {
 namespace theory {

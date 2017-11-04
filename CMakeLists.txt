@@ -11,9 +11,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 if(CMAKE_BUILD_TYPE MATCHES DEBUG)
   message("DEBUG mode")
   set(build_type_flags "-g -Og --coverage")
+  set(CMAKE_CXX_CLANG_TIDY "clang-tidy-5.0")
 else()
   message("RELEASE mode")
   set(build_type_flags "-O3 -Werror")
+  set(CMAKE_CXX_CLANG_TIDY "clang-tidy-5.0;-warnings-as-errors=*")
 endif()
 
 set(CMAKE_CXX_FLAGS
@@ -22,8 +24,8 @@ include_directories(
   ${PROJECT_SOURCE_DIR}/src)
 add_library(
   speed_of_sound
-  src/speed_of_sound.cc
-  src/speed_of_sound_theory.cc)
+  src/speed-of-sound.cc
+  src/speed-of-sound-theory.cc)
 
 # Unit tests
 set(GOOGLETEST_ROOT external/googletest/googletest)
@@ -40,8 +42,8 @@ add_library(googletest ${GOOGLETEST_SOURCES})
 add_executable(
   unit_tests
   test/test.cc
-  test/speed_of_sound_test.cc
-  test/speed_of_sound_theory_test.cc)
+  test/speed-of-sound_test.cc
+  test/speed-of-sound-theory_test.cc)
 add_dependencies(unit_tests googletest)
 target_link_libraries(
   unit_tests

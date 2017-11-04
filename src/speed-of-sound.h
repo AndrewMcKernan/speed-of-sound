@@ -1,5 +1,4 @@
-// speed_of_sound.h
-#include "speed_of_sound_theory.h"
+#include "speed-of-sound-theory.h"
 
 #ifndef SPEED_OF_SOUND_H_
 #define SPEED_OF_SOUND_H_

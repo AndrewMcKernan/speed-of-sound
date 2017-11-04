@@ -1,5 +1,6 @@
-// speed_of_sound_test.cc
-#include "speed_of_sound_test.h"
+#include "speed-of-sound_test.h"
+
+#include <chrono>
 
 TEST_F(EnvironmentTest, EnvironmentConstructorDefaultValue) {
   EXPECT_DOUBLE_EQ(environment.temperature_,

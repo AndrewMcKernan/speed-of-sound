@@ -1,5 +1,4 @@
-// speed_of_sound.cc
-#include "speed_of_sound.h"
+#include "speed-of-sound.h"
 
 namespace speedofsound {
 Environment::Environment() {

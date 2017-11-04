@@ -1,8 +1,8 @@
-// speed_of_sound_test.h
-#include "test.h"
-
 #ifndef TEST_SPEED_OF_SOUND_TEST_H_
 #define TEST_SPEED_OF_SOUND_TEST_H_
+
+#include "gtest/gtest.h"
+#include "speed-of-sound.h"
 
 class EnvironmentTest : public ::testing::Test {
  public:
@@ -29,4 +29,5 @@ class SpeedOfSoundTest : public ::testing::Test {
   static constexpr double kXcMax = speedofsound::theory::kMaxCO2MoleFraction;
 };
 
-#endif
+#endif  // TEST_SPEED_OF_SOUND_TEST_H_
+
